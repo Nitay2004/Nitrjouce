@@ -1,0 +1,496 @@
+@font-face {
+  font-family: nb;
+  src: url(./NBInternationalProBoo.ttf);
+}
+
+@font-face {
+  font-family: rejoy;
+  src: url(SuisseIntl-Light.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #dadada;
+  position: relative;
+}
+
+#cursor {
+  height: 7.5vw;
+  width: 7.5vw;
+  background-color: #ff5f3b;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+#cursor h5 {
+  font-size: 1.15vw;
+}
+#page1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+#page1-content {
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(0, 0, 0); */
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding-bottom: 5vw; */
+}
+
+nav {
+  /* height: 100px; */
+  width: 100%;
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 3vw;
+}
+
+nav h3 {
+  font-size: 1.4vw;
+  font-weight: 100;
+}
+
+#page1-content h1 {
+  font-family: rejoy;
+  font-size: 27vw;
+  font-weight: 100;
+}
+
+#page1-content h1 span {
+  font-family: rejoy;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background: #faf8f3;
+  color: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+}
+#page2 > #nav {
+  display: flex;
+  padding: 2.8vw;
+  padding-bottom: 1vw;
+  height: 21vh;
+  width: 100%;
+  align-items: end;
+  overflow: hidden;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #91908e; */
+}
+hr {
+  width: 94.4vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+#page2 > #nav > .elem h1 {
+  align-items: baseline;
+  font-family: nb;
+  font-size: 1.67vw;
+  font-weight: 100;
+}
+#page2 > .heading {
+  padding: 2.8vw;
+}
+#page2 > .heading h1 {
+  font-size: 4.2vw;
+  font-weight: 500;
+}
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 3vw;
+}
+
+#page3-top {
+  /* background-color: red; */
+  text-align: center;
+}
+
+#page3-top h4 {
+  margin-bottom: 1vw;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+#page3-top span {
+  font-size: 0.7vw;
+  background-color: #000;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+#page3-top h2 {
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+#page3-elements {
+  height: 75vh;
+  width: 100%;
+  /* background-color: red; */
+  margin-top: 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page3-elements .box {
+  height: 100%;
+  width: 32.5%;
+  position: relative;
+  /* background-color: blue; */
+}
+
+#page3-elements .box video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#page3-elements .box img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease-in 0.7s;
+}
+
+#page3-elements .box:hover img {
+  opacity: 0;
+}
+
+.page4 {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  /* display: flex; */
+}
+.page4 .page4-top {
+  height: 100px;
+  width: 100vw;
+  padding: 0.6vw 3vw;
+  margin-top: 30px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.page4 .page4-top h3 {
+  font-size: 1.7vw;
+  font-weight: lighter;
+  letter-spacing: -0.5px;
+  color: #141414;
+}
+.page4 .page4-top .top-text {
+  overflow: hidden;
+}
+.page4 .page4-top-border {
+  height: 1px;
+  width: 0vw;
+  margin: 0.6vw 3vw;
+  background-color: rgb(71, 71, 71);
+}
+.page4 .page4-bottom {
+  height: 415px;
+  width: 100vw;
+  overflow: hidden;
+}
+.page4 .page4-bottom .btm-text {
+  padding: 2vw 3vw;
+  overflow: hidden;
+}
+.page4 .page4-bottom .btm-text h2 .up {
+  overflow: hidden;
+}
+.page4 .page4-bottom .btm-text h2 span {
+  font-size: 2.9vw;
+  font-weight: lighter;
+  line-height: 1;
+  letter-spacing: -1px;
+  display: inline-block;
+  overflow: hidden;
+}
+.page4 video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.page5{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+.page5 .text{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0vw 3vw;
+}
+.page5 .text h1{
+    font-size: 8.5vw;
+    font-family: rejo;
+    font-weight: 500;
+}
+.page5 .text h3{
+    font-size: 1.8vw;
+    font-weight: lighter;
+    position: relative;
+    cursor: pointer;
+}
+.page5 .text h3::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform .35s ease-out;
+}
+.page5 .text h3:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+.page5 .text h3 i{
+    font-size: 1.9vw;
+    margin-right: 10px;
+}
+.page5 .page5-top-border{
+    height: 1px;
+    width: 94vw;
+    margin: .6vw 3vw;
+    background-color: rgb(71, 71, 71);
+}
+.swiper {
+    width: 100%;
+    height: 50vh;
+    margin-top: -5vw;
+    position: relative;
+}
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.swiper-slide img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+}
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page9{
+    height: 50vh;
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.page9 .page9-text{
+    overflow: hidden;
+    height: 155px;
+}
+.page9 .page9-text h4{
+    color: #161616;
+    font-weight: lighter;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.page9 .page9-text h4 i{
+    color: #161616;
+    margin-top: 2px;
+}
+.page9 .page9-text h1{
+    cursor: pointer;
+    font-size: 4vw;
+    font-weight: lighter;
+    line-height: 1;
+    position: relative;
+}
+.page9 .page9-text h1::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background-color: #000000;
+    transition: transform .4s ease-out;
+}
+.page9 .page9-text h1:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+footer{
+    height: 100vh;
+    width: 100vw;
+    background-color:#0E0E0E;
+}
+footer .footer-top{
+    height: 65vh;
+    width: 100vw;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-top .first{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15vw;
+    padding: 2.5vw;
+    color: #fff;
+}
+.footer-top .first .first-top h2{
+    font-weight: lighter;
+    letter-spacing: -.5px;
+}
+.footer-top .first .first-top button{
+    padding:  15px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    font-size: 1.1vw;
+    font-weight: lighter;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.footer-top .first .first-top button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.footer-top .first .first-btm h4{
+    font-weight: lighter;
+}
+.footer-top .second{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: -2.5vw;
+    padding-right: 3vw;
+    color: #fff;
+}
+.second .second-one{
+    display: flex;
+    flex-direction: column;
+    gap: 15vw;
+}
+.second .second-one .span span{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+.second .second-one .span>span::after,.second .second-one .span1>span::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0%;
+    left: 0%;
+    transform: scaleX(0);
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform .35s ease-out;
+}
+.second .second-one .span>span:hover::after,.second .second-one .span1>span:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+.second .second-two{
+    display: flex;
+    flex-direction: column;
+    gap: 17.5vw;
+}
+.second .second-two .span span{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+.second .second-two .span>span::after,.second .second-two .span1>span::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0%;
+    left: 0%;
+    transform: scaleX(0);
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform .35s ease-out;
+}
+.second .second-two .span>span:hover::after,.second .second-two .span1>span:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+.second .second-two .span1{
+    position: relative;
+    cursor: pointer;
+}
+.second .second-one .span1{
+    position: relative;
+    cursor: pointer;
+}
